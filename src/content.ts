@@ -4,7 +4,14 @@ import scriptJson from '../content/script.json';
 import themeJson from '../theme/theme.json';
 import manifestJson from './generated/manifest.json';
 
-export type Media = {tiedosto: string; kuvaus: string; tyyppi?: 'video' | 'puhuja' | 'kuva'; nimiplanssi?: boolean};
+export type Media = {
+  tiedosto: string;
+  kuvaus: string;
+  tyyppi?: 'video' | 'puhuja' | 'kuva';
+  nimiplanssi?: boolean;
+  /** Kuinka monen sekunnin kohdalta kuvattu pätkä aloitetaan (oletus 0). */
+  aloitaKohdasta?: number;
+};
 export type Alkaa = string | number | undefined;
 
 export type Kohtaus = {

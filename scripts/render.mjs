@@ -2,6 +2,7 @@
 //   npm run render                 → out/<nimi>.mp4, out/<nimi>_tekstitetty.mp4 ja out/<nimi>.srt
 //   npm run render -- --kohtaus 5  → out/koeversio_kohtaus_5.mp4 (vain yksi kohtaus)
 //   lisävalinta --tekstitys        → yhden kohtauksen renderöintiin poltettu tekstitys
+//   lisävalinta --ilman-tekstitysta → koko videosta vain versio ilman poltettua tekstitystä (nopeampi)
 import fs from 'node:fs';
 import path from 'node:path';
 import {execFileSync} from 'node:child_process';
@@ -50,6 +51,10 @@ if (kohtaus) {
   renderoi(`Kohtaus-${kohtaus}`, `koeversio_kohtaus_${kohtaus}${tekstitys ? '_tekstitetty' : ''}.mp4`, {tekstitys});
 } else {
   renderoi('Tenttiakvaario', `${nimi}.mp4`, {tekstitys: false});
-  renderoi('Tenttiakvaario', `${nimi}_tekstitetty.mp4`, {tekstitys: true});
-  console.log(`\nValmis: out/${nimi}.mp4, out/${nimi}_tekstitetty.mp4, out/${nimi}.srt`);
+  const tiedostot = [`${nimi}.mp4`];
+  if (!args.includes('--ilman-tekstitysta')) {
+    renderoi('Tenttiakvaario', `${nimi}_tekstitetty.mp4`, {tekstitys: true});
+    tiedostot.push(`${nimi}_tekstitetty.mp4`);
+  }
+  console.log(`\nValmis: ${[...tiedostot, `${nimi}.srt`].map((t) => `out/${t}`).join(', ')}`);
 }

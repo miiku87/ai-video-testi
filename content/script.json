@@ -132,7 +132,7 @@
       "asettelu": "loppukortti",
       "logo": "laurea-logo.svg",
       "otsikko": "Tervetuloa mukaan!",
-      "rivit": ["Lisätietoa: [LINKKI]", "Yhteyshenkilö: [NIMI]"]
+      "rivit": ["Lisätietoa: [LINKKI] · Yhteyshenkilö: [NIMI]"]
     }
   ]
 }
