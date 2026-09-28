@@ -1,0 +1,25 @@
+{
+  "name": "tenttiakvaario-video",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Laurean tenttiakvaarion esittelyvideo (Remotion)",
+  "scripts": {
+    "prepare-content": "node scripts/prepare.mjs",
+    "studio": "node scripts/prepare.mjs && remotion studio",
+    "render": "node scripts/render.mjs",
+    "koeversio": "node scripts/render.mjs --kohtaus 5"
+  },
+  "dependencies": {
+    "@fontsource/inter": "5.3.0",
+    "@remotion/cli": "4.0.529",
+    "lucide-react": "1.48.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "remotion": "4.0.529"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "@types/react": "^19.3.0",
+    "typescript": "^7.0.2"
+  }
+}

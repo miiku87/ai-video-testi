@@ -1,0 +1,138 @@
+{
+  "_ohje": "Kaikki videon tekstit ovat tässä tiedostossa. Muokkaa tekstejä lainausmerkkien sisällä ja aja sen jälkeen: npm run render. Ks. README.md.",
+
+  "video": {
+    "otsikko": "Tenttiakvaario – esittelyvideo",
+    "tiedostonimi": "tenttiakvaario_v1",
+    "fps": 25,
+    "leveys": 1920,
+    "korkeus": 1080
+  },
+
+  "henkilot": {
+    "puhuja": { "nimi": "[NIMI]", "titteli": "[TITTELI]" }
+  },
+
+  "musiikki": {
+    "_ohje": "Musiikkia ei käytetä ilman lupaa. Kun lupa on, laita tiedosto polkuun assets/music/taustamusiikki.mp3 ja vaihda kayta-arvoksi true. Voimakkuus 0–1.",
+    "kayta": false,
+    "tiedosto": "music/taustamusiikki.mp3",
+    "voimakkuus": 0.12
+  },
+
+  "tekstitys": {
+    "merkkejaRivilla": 42,
+    "riveja": 2,
+    "vahimmaisKestoSek": 1.5
+  },
+
+  "kohtaukset": [
+    {
+      "id": "kohtaus_1",
+      "nimi": "Avaus",
+      "kestoSek": 15,
+      "aani": "audio/kohtaus_1.wav",
+      "puhe": "Miten voimme luottaa siihen, että arvosana kertoo opiskelijan omasta osaamisesta nyt, kun tekoäly on jokaisen ulottuvilla? Yksi Laurean vastauksista on tenttiakvaario.",
+      "asettelu": "kuvat",
+      "kuvat": [
+        { "tyyppi": "video", "tiedosto": "video/akvaario_tyhja.mp4", "kuvaus": "Tyhjä tenttiakvaario" },
+        { "tyyppi": "video", "tiedosto": "video/akvaario_koneet.mp4", "kuvaus": "Rivi tietokoneita", "alkaa": "arvosana kertoo" },
+        { "tyyppi": "video", "tiedosto": "video/akvaario_kamera.mp4", "kuvaus": "Lähikuva valvontakamerasta", "alkaa": "kun tekoäly" },
+        { "tyyppi": "puhuja", "tiedosto": "video/puhuja_1.mp4", "kuvaus": "Puhuja kameraan", "alkaa": "Yksi Laurean", "nimiplanssi": true }
+      ]
+    },
+    {
+      "id": "kohtaus_2",
+      "nimi": "Mikä tenttiakvaario on",
+      "kestoSek": 25,
+      "aani": "audio/kohtaus_2.wav",
+      "puhe": "Tenttiakvaario on Tikkurilan kampuksella oleva videovalvottu tila, jossa opiskelijat tekevät sähköisiä tenttejä EXAM-järjestelmässä. Tilassa ei ole paikalla valvojaa, vaan valvonta hoidetaan kameroilla.",
+      "asettelu": "kuvat",
+      "kuvat": [
+        { "tyyppi": "video", "tiedosto": "video/kampus_ulko.mp4", "kuvaus": "Tikkurilan kampus ulkoa" },
+        { "tyyppi": "video", "tiedosto": "video/akvaario_ovi.mp4", "kuvaus": "Tenttiakvaarion ovi", "alkaa": "videovalvottu tila" },
+        { "tyyppi": "video", "tiedosto": "video/akvaario_sisalla.mp4", "kuvaus": "Tenttiakvaario sisältä", "alkaa": "Tilassa ei ole" }
+      ],
+      "tekstigrafiikka": { "teksti": "Videovalvottu tila sähköisille tenteille", "alkaa": "videovalvottu tila" }
+    },
+    {
+      "id": "kohtaus_3",
+      "nimi": "Opiskelijan polku",
+      "kestoSek": 25,
+      "aani": "audio/kohtaus_3.wav",
+      "puhe": "Opiskelija ilmoittautuu tenttiin EXAMissa ja varaa itselleen sopivan ajan. Tenttipäivänä omat tavarat jäävät lokeroon, ja tilaan otetaan mukaan vain henkilöllisyystodistus. Tentti tehdään tenttikoneella, ja siinä voi olla myös vaikkapa Excel-tehtävä.",
+      "asettelu": "prosessi",
+      "otsikko": "Opiskelijan polku",
+      "nosto": { "teksti": "Opiskelija valitsee itse tenttiaikansa", "alkaa": "varaa itselleen" },
+      "vaiheet": [
+        { "teksti": "Ilmoittaudu ja varaa aika", "ikoni": "CalendarCheck", "alkaa": "Opiskelija ilmoittautuu",
+          "kuva": { "tiedosto": "screenshots/exam_ajanvaraus.png", "kuvaus": "Ruutukaappaus: EXAMin ajanvaraus" } },
+        { "teksti": "Tavarat lokeroon", "ikoni": "Lock", "alkaa": "omat tavarat" },
+        { "teksti": "Ovikoodi", "ikoni": "KeyRound", "alkaa": "tilaan otetaan" },
+        { "teksti": "Tentti tenttikoneella", "ikoni": "Monitor", "alkaa": "Tentti tehdään" },
+        { "teksti": "Palautus", "ikoni": "Send", "alkaa": "Excel-tehtävä" }
+      ]
+    },
+    {
+      "id": "kohtaus_4",
+      "nimi": "Opettajan polku",
+      "kestoSek": 35,
+      "aani": "audio/kohtaus_4.wav",
+      "puhe": "Opettaja rakentaa tentin EXAMiin. Kysymykset hän kirjoittaa itse tai hakee kysymyspankista. Kun tentti on julkaistu, opettajan ei tarvitse järjestää tenttitilaisuutta eikä valvoa sitä. Hän arvioi palautetut tentit ja kirjaa arvosanat Peppiin. Videotallenteet käydään läpi erikseen, ja mahdolliset vilppiepäilyt käsitellään Laurean vilppiohjeen mukaisesti.",
+      "asettelu": "prosessi",
+      "otsikko": "Opettajan polku",
+      "vaiheet": [
+        { "teksti": "Luo tentti", "ikoni": "FilePlus", "alkaa": "Opettaja rakentaa",
+          "kuva": { "tiedosto": "screenshots/exam_tentin_luonti.png", "kuvaus": "Ruutukaappaus: tentin luominen EXAMissa" } },
+        { "teksti": "Lisää kysymykset", "lisateksti": "itse tai kysymyspankista", "ikoni": "ListChecks", "alkaa": "Kysymykset hän",
+          "kuva": { "tiedosto": "screenshots/exam_kysymyspankki.png", "kuvaus": "Ruutukaappaus: EXAMin kysymyspankki" } },
+        { "teksti": "Julkaise", "ikoni": "Upload", "alkaa": "Kun tentti on julkaistu" },
+        { "teksti": "Arvioi", "ikoni": "ClipboardCheck", "alkaa": "Hän arvioi",
+          "kuva": { "tiedosto": "screenshots/exam_arviointi.png", "kuvaus": "Ruutukaappaus: arviointi EXAMissa" } },
+        { "teksti": "Kirjaa Peppiin", "ikoni": "BookOpenCheck", "alkaa": "kirjaa arvosanat" }
+      ],
+      "sivuhuomio": {
+        "teksti": "Videotallenteet käydään läpi erikseen. Vilppiepäilyt käsitellään Laurean vilppiohjeen mukaan.",
+        "ikoni": "Video",
+        "alkaa": "Videotallenteet"
+      }
+    },
+    {
+      "id": "kohtaus_5",
+      "nimi": "Kolme hyötyä",
+      "kestoSek": 25,
+      "aani": "audio/kohtaus_5.wav",
+      "puhe": "Tenttiakvaario tukee kolmea asiaa. Arviointi on luotettavaa, koska tentti tehdään valvotusti ja kaikille samoissa oloissa. Se on joustavaa, koska opiskelija ei ole sidottu yhteen tenttipäivään. Ja se on tehokasta, koska tenttien järjestäminen ja osa arvioinnista hoituu järjestelmässä.",
+      "asettelu": "puhuja_ja_sanat",
+      "puhujakuva": { "tiedosto": "video/puhuja_2.mp4", "kuvaus": "Puhuja kameraan" },
+      "jakoAlkaa": "Arviointi on",
+      "sanat": [
+        { "sana": "Luotettava", "selite": "Valvottu tentti, samat olosuhteet kaikille", "ikoni": "ShieldCheck", "alkaa": "Arviointi on" },
+        { "sana": "Joustava", "selite": "Ei sidottu yhteen tenttipäivään", "ikoni": "CalendarClock", "alkaa": "Se on joustavaa" },
+        { "sana": "Tehokas", "selite": "Järjestäminen ja osa arvioinnista hoituu järjestelmässä", "ikoni": "Gauge", "alkaa": "Ja se on tehokasta" }
+      ]
+    },
+    {
+      "id": "kohtaus_6",
+      "nimi": "Kehittäminen ja kutsu",
+      "kestoSek": 20,
+      "aani": "audio/kohtaus_6.wav",
+      "puhe": "Kehitämme toimintamallia koko ajan. Esimerkiksi arvosanojen automaattinen siirto Peppiin on vielä työn alla. Esihenkilöt, kannustakaa opettajia kokeilemaan ja varatkaa heille aikaa EXAMin opetteluun. Palautteenne auttaa tekemään tenttiakvaariosta toimivan kaikille.",
+      "asettelu": "kuvat",
+      "kuvat": [
+        { "tyyppi": "puhuja", "tiedosto": "video/puhuja_3.mp4", "kuvaus": "Puhuja kameraan" }
+      ]
+    },
+    {
+      "id": "kohtaus_7",
+      "nimi": "Loppukortti",
+      "kestoSek": 10,
+      "aani": "audio/kohtaus_7.wav",
+      "puhe": "Lisätietoa ja opettajien ohjeet löydät [OSOITE]. Tervetuloa mukaan!",
+      "asettelu": "loppukortti",
+      "logo": "laurea-logo.svg",
+      "otsikko": "Tervetuloa mukaan!",
+      "rivit": ["Lisätietoa: [LINKKI]", "Yhteyshenkilö: [NIMI]"]
+    }
+  ]
+}

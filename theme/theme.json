@@ -1,0 +1,39 @@
+{
+  "_ohje": "Videon värit ja fontit. Kentät, joiden nimi alkaa VAIHDA_, korvataan Laurean brändiarvoilla. Värit muodossa #RRGGBB.",
+
+  "varit": {
+    "_VAIHDA_varit": "Neutraali väliaikainen paletti. Vaihda Laurean brändivärit tähän.",
+    "tausta": "#F4F5F2",
+    "pinta": "#FFFFFF",
+    "teksti": "#1E2A32",
+    "tekstiHaalea": "#5A6872",
+    "korostus": "#2E6B70",
+    "korostusVaalea": "#DDEAE9",
+    "viiva": "#D5DADB",
+    "paikkamerkkiTausta": "#B8BDC0",
+    "paikkamerkkiTeksti": "#2B3338",
+    "tekstitysTausta": "rgba(20, 26, 30, 0.78)",
+    "tekstitysTeksti": "#FFFFFF"
+  },
+
+  "fontit": {
+    "_VAIHDA_fontti": "Oletuksena avoimesti lisensoitu Inter. Brändifontti: laita fonttitiedosto kansioon assets/fonts/ ja kirjoita perhe ja tiedosto alle (esim. \"fonts/Brandi-Regular.woff2\").",
+    "perhe": "Inter",
+    "tiedostoNormaali": "",
+    "tiedostoLihavoitu": ""
+  },
+
+  "koot": {
+    "otsikko": 64,
+    "sanaIso": 88,
+    "leipa": 36,
+    "pieni": 28,
+    "tekstitys": 44
+  },
+
+  "animaatio": {
+    "_ohje": "Rauhallinen tempo. Pienempi luku = nopeampi.",
+    "sisaantuloSek": 0.7,
+    "kohtauksenHaivytysSek": 0.4
+  }
+}
